@@ -17,6 +17,8 @@
 // Promenna argc obsahuje pocet argumentu programu (vcetne samotneho nazvu programu)
 // Pole argv obsahuje jednotlive argumenty z prikazove radky
 std::string nazev_z_prikazove_radky(int argc, char* argv[]) {
+    // argc - argument count
+    // argv - argument vector
     if (argc < 2)
         throw std::runtime_error("Musite zadat nazev vstupniho souboru");
 
@@ -29,7 +31,7 @@ int main(int argc, char* argv[]) {
 
     std::string nazev_vstupniho_souboru = nazev_z_prikazove_radky(argc,argv);
     
-    seznam_slov jmena;
+    seznam_slov jmena; // deklarace prommene "jmena" datovy typ nacteny z "trideni.h"
 
     // UKOL 1 - Implementujte nasledujici funkci, ktera nacte do objektu "jmena"
     //          vsechna slova ve vstupnim souboru (1 radek = 1 polozka)
@@ -38,6 +40,7 @@ int main(int argc, char* argv[]) {
     std::cout << "Nacteno " << jmena.size() << " slov." << std::endl;
     std::cout << "Serazuji slova ... " << std::endl;
 
+    /*
     // Zacatek mereni CPU casu
     clock_t start = clock();
 
@@ -55,8 +58,9 @@ int main(int argc, char* argv[]) {
     //          jestli chce vypsat jmena na obrazovku
     if (zeptej_se_jestli_vypsat()) {
       // UKOL 4 - Tato funkce vypise serazena jmena na obrazovku
-      vypis(jmena); 
     }
+    */
+        vypis(jmena);
 
     return 0;
 }
